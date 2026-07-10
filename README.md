@@ -71,6 +71,46 @@ curl -X POST http://localhost:8000/query \
 curl -X POST http://localhost:8000/ingest
 ```
 
+### Match-Day Briefings
+
+Returns AI-generated match-day previews for a specific tournament date. The `target_date` query parameter is optional—if omitted, the endpoint uses the current date.
+
+**Method:** `GET`
+
+**Query Parameters**
+
+| Parameter | Required | Description |
+|-----------|----------|-------------|
+| `target_date` | No | Tournament date in `YYYY-MM-DD` format. Defaults to the current date if omitted. |
+
+**Example**
+
+```bash
+curl -X GET "http://localhost:8000/matches/today?target_date=2026-07-06"
+```
+
+**Example Response**
+
+```json
+{
+  "date": "2026-07-06",
+  "matches": [
+    {
+      "teams": "Portugal vs Spain",
+      "venue": "Mercedes-Benz Stadium",
+      "kickoff_time": "3:00 PM ET",
+      "narrative": "As the sun sets over Mercedes-Benz Stadium, Portugal and Spain renew one of football's great rivalries in a Round of 16 showdown. With world-class talent on both sides, fans can expect an intense, tactical battle for a place in the quarter-finals."
+    },
+    {
+      "teams": "United States vs Belgium",
+      "venue": "Lumen Field",
+      "kickoff_time": "8:00 PM ET",
+      "narrative": "The United States hosts Belgium in a highly anticipated knockout match under the lights at Lumen Field. A passionate home crowd and two talented squads set the stage for an unforgettable World Cup evening."
+    }
+  ]
+}
+```
+
 ## Cost Breakdown
 
 | Service | Usage | Estimated Cost |

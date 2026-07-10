@@ -1,0 +1,22 @@
+[
+  {
+    "date": "2026-07-06",
+    "stage": "Round of 16",
+    "home_team": "Portugal",
+    "away_team": "Spain",
+    "venue": "Mercedes-Benz Stadium",
+    "city": "Atlanta",
+    "kickoff_time": "3:00 PM ET",
+    "source": "matches.json"
+  },
+  {
+    "date": "2026-07-06",
+    "stage": "Round of 16",
+    "home_team": "United States",
+    "away_team": "Belgium",
+    "venue": "Lumen Field",
+    "city": "Seattle",
+    "kickoff_time": "8:00 PM ET",
+    "source": "matches.json"
+  }
+]
